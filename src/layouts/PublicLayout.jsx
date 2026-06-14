@@ -63,8 +63,8 @@ export const PublicLayout = () => {
       {/* Sticky Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-            ? 'bg-brand-black border-b border-brand-mud-light py-3 shadow-lg shadow-black/45'
-            : 'bg-brand-black border-b border-brand-mud-light py-5'
+          ? 'bg-brand-black border-b border-brand-mud-light py-3 shadow-lg shadow-black/45'
+          : 'bg-brand-black border-b border-brand-mud-light py-5'
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -99,13 +99,13 @@ export const PublicLayout = () => {
           </nav>
 
           {/* Actions - Client Portal */}
-          <div className="hidden lg:flex items-center">
-            <Link
+          <div className="hidden lg:flex items-center border border-brand-orange/60 bg-orange p-2 rounded-lg">
+            {/* <Link
               to="/dashboard"
               className="px-4 py-2 rounded bg-brand-mud border border-brand-tan/10 hover:border-brand-orange/60 text-brand-tan hover:text-brand-orange text-xs font-bold uppercase tracking-wider transition-all duration-300"
-            >
-              Portal Login
-            </Link>
+            > */}
+            Portal Login
+            {/* </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
