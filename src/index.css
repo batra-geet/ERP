@@ -4,14 +4,14 @@
 
 @theme {
   --font-sans: 'Outfit', 'Inter', sans-serif;
-  --color-brand-black: #090807;
-  --color-brand-mud: #1c1816;
-  --color-brand-mud-light: #29231f;
+  --color-brand-black: #fff;
+  --color-brand-mud: #fae4d4;
+  --color-brand-mud-light: #fac49d;
   --color-brand-orange: #f97316;
   --color-brand-orange-hover: #ea580c;
-  --color-brand-tan: #ebdcb9;
+  --color-brand-tan: #b05819;
   --color-brand-tan-hover: #d8c8a8;
-  --color-brand-cream: #f5f4f0;
+  --color-brand-cream: #ff0000;
 }
 
 html,
@@ -64,6 +64,7 @@ body,
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -71,9 +72,8 @@ body,
 
 @utility animate-marquee {
   animation: marquee 35s linear infinite;
+
   &:hover {
     animation-play-state: paused;
   }
 }
-
-

@@ -114,9 +114,9 @@ export const PublicLayout = () => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-brand-cream hover:text-brand-orange transition-colors"
               aria-label="Toggle menu"
-              sx={{
-                color: 'white !important',
-              }}
+            // sx={{
+            //   color: 'white !important',
+            // }}
             >
               {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
             </IconButton>
