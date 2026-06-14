@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+  --color-brand-black: #090807;
+  --color-brand-mud: #1c1816;
+  --color-brand-mud-light: #29231f;
+  --color-brand-orange: #f97316;
+  --color-brand-orange-hover: #ea580c;
+  --color-brand-tan: #ebdcb9;
+  --color-brand-tan-hover: #d8c8a8;
+  --color-brand-cream: #f5f4f0;
+}
+
+html,
+body,
+#root {
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Custom utilities for slanted borders */
+@utility clip-slanted-right {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+@utility clip-slanted-right-mobile {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 35s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+
