@@ -59,17 +59,16 @@ export const PublicLayout = () => {
 
   return (
     <div className="min-h-screen bg-brand-black text-brand-cream selection:bg-brand-orange selection:text-white flex flex-col font-sans relative">
-      
+
       {/* Sticky Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
             ? 'bg-brand-black border-b border-brand-mud-light py-3 shadow-lg shadow-black/45'
             : 'bg-brand-black border-b border-brand-mud-light py-5'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          
+
           {/* Rebranded Logo */}
           <Link
             to="/"
@@ -115,6 +114,9 @@ export const PublicLayout = () => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-brand-cream hover:text-brand-orange transition-colors"
               aria-label="Toggle menu"
+              sx={{
+                color: 'white !important',
+              }}
             >
               {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
             </IconButton>
@@ -123,9 +125,8 @@ export const PublicLayout = () => {
 
         {/* Mobile Navigation Dropdown */}
         <div
-          className={`lg:hidden absolute top-full left-0 right-0 bg-brand-mud border-b border-brand-mud-light transition-all duration-300 overflow-hidden ${
-            mobileMenuOpen ? 'max-h-screen opacity-100 py-6 px-6 shadow-2xl' : 'max-h-0 opacity-0 pointer-events-none'
-          }`}
+          className={`lg:hidden absolute top-full left-0 right-0 bg-brand-mud border-b border-brand-mud-light transition-all duration-300 overflow-hidden ${mobileMenuOpen ? 'max-h-screen opacity-100 py-6 px-6 shadow-2xl' : 'max-h-0 opacity-0 pointer-events-none'
+            }`}
         >
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
@@ -189,7 +190,7 @@ export const PublicLayout = () => {
       {/* Detailed 4-Column Footer */}
       <footer className="bg-brand-black border-t border-brand-mud-light relative z-10 pt-20 pb-10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
-          
+
           {/* Column 1: Quick Links (3 Cols) */}
           <div className="sm:col-span-1 lg:col-span-3 space-y-5">
             <h4 className="text-brand-tan font-bold text-xs tracking-widest uppercase border-b border-brand-mud-light pb-3">
